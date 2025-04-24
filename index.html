@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="//unpkg.com/aframe-extras@4.1.2/dist/aframe-extras.min.js"></script>
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <a-light type="hemisphere" color="#FFFFFF"  position="0 500 0">
+        </a-light>
+        <a-light type="point" color="#FFAAAA"  position="0 600 0">
+        </a-light>
+
+        <a-entity position="0 1.25 0" animation="property:rotation; from: 0 0 0; to: 0 360 0; dur: 50000; loop: true; easing: linear;">
+            <a-gltf-model animation="property:rotation; from: 0 0 0; to: 0 360 0; dur: 1000; loop: true; easing: linear;"position="0 37 -600" src="apollo_11_command_module_combined/scene.gltf"></a-gltf-model>
+        </a-entity>
+        <a-entity position="0 1.25 0" animation="property:rotation; from: 0 0 0; to: 0 360 0; dur: 50000; loop: true; easing: linear;">
+            <a-gltf-model animation="property:rotation; from: 0 0 0; to: 0 360 0; dur: 1000; loop: true; easing: linear;"position="0 50 -600" src="la_station_spatiale_internationale_iss/scene.gltf"></a-gltf-model>
+        </a-entity>
+        <a-sky src="imgs/galaxy.jpg" radius="9000"></a-sky>
+        <a-sphere animation="property:rotation; from: 0 0 0; to: 0 360 0; dur: 3000; loop: true; easing: linear;" position="0 1.25 0" radius="250" animation__2="property: position; from: 0 0 -20; to: 0 3 -20; dur: 3000; loop: true; dir: alternate; easing: easeInOutQuad" src="imgs/earthNight.jpg"> </a-sphere>
+   
+   
+   
+   
+   
+   
+   
+   
+        <a-camera wasd-controls="fly:true; acceleration:10000;"></a-camera>
+    </a-scene>
+</body>
+</html>
